@@ -3,6 +3,7 @@ import { GET_EPISODES } from "../graphql/queries";
 import { EpisodeProps } from "../interfaces";
 import { useState, useEffect } from "react";
 import EpisodeCard from "../components/common/EpisodeCard";
+import ErrorProneComponent from "../components/ErrorProneComponent";
 
 const Home: React.FC = () => {
   const [page, setPage] = useState<number>(1);
@@ -35,6 +36,9 @@ const Home: React.FC = () => {
           Explore the multiverse of adventures!
         </p>
       </header>
+
+      {/* ERROR PRONE COMPONENT */}
+      <ErrorProneComponent />
 
       {/* Main Content */}
       <main className="flex-grow p-6">
